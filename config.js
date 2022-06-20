@@ -11,7 +11,7 @@ global.mods = [] // Want some help?
 global.prems = [] // Premium user has unlimited limit
 global.APIs = { // API Prefix
   // name: 'https://website'
-  nrtm: 'https://nurutomo.herokuapp.com',
+  nrtm: 'https://nurut.herokuapp.com',
   xteam: 'https://api.xteam.xyz',
   zahir: 'https://zahirr-web.herokuapp.com',
   bcil: 'https://75.119.137.248:21587',
@@ -58,7 +58,7 @@ fs.watchFile(file_exif, () => {
 // Sticker WM
 global.packname = sticker_name
 global.author = sticker_author
-global.wm = '© Rangga'
+global.wm = '© Rangga Botz'
 
 global.multiplier = 1000 // The higher, The harder levelup
 
