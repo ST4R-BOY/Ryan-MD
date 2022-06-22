@@ -1,15 +1,21 @@
-version: "3.9"  # optional since v1.27.0
 services:
-  web:
-    build: .
+  vote:
+    build: vote
+    scale: 2
+    environment:
+      - FLASK_ENV=development
+    command: python app.py
     ports:
-      - "8000:5000"
+      - 8080:8080
     volumes:
-      - .:/code
-      - logvolume01:/var/log
-    links:
-      - redis
+      - ./vote:/src
+
   redis:
     image: redis
+    ports:
+      - 6379
+    volumes:
+      - redis:/data
+
 volumes:
-  logvolume01: {}
+  redis:
