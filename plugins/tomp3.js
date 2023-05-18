@@ -18,9 +18,8 @@ let handler = async (m, { conn, usedPrefix, command }) => {
     let audio = await toPTT(media, 'mp4')
     if (!audio.data) throw 'Gagal melakukan konversi.'
     await conn.sendFile(m.chat, audio.data, 'file.mp4', '', m, 1, { mimetype: 'audio/mp4' })
-  }
-}
-handler.help = ['tomp3', 'tovn']
+  }}
+handler.help = ['mp3', 'tovn']
 handler.tags = ['audio']
 handler.command = /^to(mp3|a(udio)?|vn|ptt)$/i
 
